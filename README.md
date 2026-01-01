@@ -1,12 +1,8 @@
 # Facial Recognition Using Ensemble and Network of Quantum Convolutional Neural Networks (N-QCNN)
 
 This repository contains the code, experimental pipeline, and supporting material for the paper:
-
-**Facial Recognition by Using Ensemble and Network of Quantum Convolutional Neural Networks**  
-Sharmendra Desiboyina, Emre Tokgoz  
 Accepted at **ASCE CSCI 2025** (Springer proceedings; publication expected Jan 2026)
 
----
 
 ## Overview
 
@@ -16,7 +12,6 @@ Instead of relying on a single QCNN architecture, the proposed approach integrat
 
 The primary motivation is to achieve **robust feature extraction on small datasets**, where classical deep learning models often struggle due to limited training samples.
 
----
 
 ## Key Idea
 
@@ -27,7 +22,6 @@ To explore this question, the model:
 - emphasizes **architectural diversity** rather than deeper circuits
 - combines quantum feature extraction with classical SVM decision boundaries
 
----
 
 ## Contributions
 
@@ -40,7 +34,6 @@ To explore this question, the model:
   - the **full 15-class dataset** (80.00% accuracy)
 - Demonstration of strong performance under **extremely limited training data**
 
----
 
 ## Dataset & Preprocessing
 
@@ -50,7 +43,6 @@ To explore this question, the model:
 - Pixel values normalized to the range **[0, 2π]**
 - Each patch encoded using **angle encoding (RY gates)** into a 4-qubit quantum state
 
----
 
 ## Model Architecture
 
@@ -74,7 +66,6 @@ QCNN variants include:
   1. majority voting across SVM outputs
   2. confidence-based tie breaking in case of ties
 
----
 
 ## Experimental Setup
 
@@ -86,7 +77,6 @@ QCNN variants include:
   - 8 images per subject for training
   - 3 images per subject for testing
 
----
 
 ## Results
 
@@ -99,24 +89,3 @@ Observations:
 - Near-perfect classification for several subjects
 - Increased performance variance for visually similar subjects
 - Ensemble architecture remains robust as classification complexity increases
-
----
-
-## Discussion & Limitations
-
-This work **does not claim quantum advantage**.
-
-Key limitations identified:
-- sensitivity to circuit depth and quantum noise
-- scalability challenges of amplitude encoding
-- reliance on classical classifiers for final decision boundaries
-
-Despite these limitations, the results validate:
-- the **practical feasibility** of N-QCNNs
-- the importance of **architectural diversity** in quantum feature extraction
-- the potential of hybrid models in **small-sample learning regimes**
-
----
-
-## Repository Structure (Planned)
-
